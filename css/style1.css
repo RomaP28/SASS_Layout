@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.header-section {
+  height: 100vh;
+  width: 100%;
+  padding-top: 60px;
+  background-image: url(../img/0.jpg);
+  border-top-right-radius: 1000px 500px;
+  border-bottom-right-radius: 1000px 500px; }
+  .header-section .menu ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 35px;
+    font-size: 1.5em;
+    width: 62%;
+    list-style: none; }
+    .header-section .menu ul .wide {
+      margin-top: -13px;
+      text-align: center;
+      width: 90px; }
+    .header-section .menu ul a {
+      color: white;
+      outline: none;
+      text-decoration: none; }
+  .header-section .header-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px;
+    width: 50%;
+    margin: 200px auto 0 auto; }
+    .header-section .header-content h1 {
+      font-size: 3em;
+      font-weight: lighter;
+      font-family: "Source Sans Pro";
+      text-align: center;
+      color: white; }
+    .header-section .header-content button {
+      cursor: pointer;
+      border: 1px solid grey;
+      color: grey;
+      background-color: transparent;
+      padding: 16px 30px; }
+
+.main-section, .reviews, .adress-section {
+  height: auto;
+  width: 1000px;
+  margin: 30px auto;
+  text-align: center; }
+  .main-section h2, .reviews h2, .adress-section h2 {
+    font-size: 2.5em;
+    font-weight: lighter;
+    font-family: "Hind"; }
+  .main-section .container, .reviews .container, .adress-section .container {
+    display: flex;
+    box-shadow: 0px 0px 11px -1px #404040;
+    margin-top: 50px; }
+    .main-section .container .img-01, .reviews .container .img-01, .adress-section .container .img-01 {
+      height: 300px;
+      width: 230px;
+      background: url(../img/1.jpg) no-repeat center;
+      background-size: cover;
+      display: inline-block; }
+    .main-section .container .img-02, .reviews .container .img-02, .adress-section .container .img-02 {
+      height: 230px;
+      width: 230px;
+      background: url(../img/2.jpg) no-repeat center;
+      background-size: cover;
+      display: inline-block; }
+    .main-section .container .img-03, .reviews .container .img-03, .adress-section .container .img-03 {
+      height: 290px;
+      width: 230px;
+      background: url(../img/3.jpg) no-repeat center;
+      background-size: cover;
+      display: inline-block; }
+    .main-section .container .textblock, .reviews .container .textblock, .adress-section .container .textblock {
+      width: 70%;
+      padding: 30px 10px 0 30px; }
+      .main-section .container .textblock h2, .reviews .container .textblock h2, .adress-section .container .textblock h2 {
+        font-size: 2.2em;
+        font-weight: lighter;
+        font-family: "Hind";
+        text-align: center;
+        margin-left: 5px;
+        color: grey; }
+      .main-section .container .textblock p, .reviews .container .textblock p, .adress-section .container .textblock p {
+        font-size: 1em;
+        font-weight: lighter;
+        font-family: "Hind";
+        color: black;
+        text-align: left; }
+
+.reviews {
+  height: auto;
+  width: 1280px;
+  background-color: #8D6F79;
+  padding-top: 12px; }
+  .reviews h2 {
+    font-size: 2em;
+    font-weight: lighter;
+    font-family: "Hind";
+    color: #CBA2B0;
+    margin-bottom: 10px; }
+  .reviews .reviews-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 20px; }
+    .reviews .reviews-container .card {
+      height: 120px;
+      width: 30%;
+      display: flex;
+      padding: 10px;
+      background-color: #CBA2B0;
+      color: white; }
+      .reviews .reviews-container .card img {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%; }
+      .reviews .reviews-container .card .card-text {
+        margin: auto;
+        margin-left: 20px;
+        text-align: left; }
+
+.adress-section {
+  height: auto;
+  width: 800px;
+  padding-top: 50px;
+  padding-bottom: 5px;
+  background-color: #8695A2; }
+  .adress-section h2 {
+    font-size: 2em;
+    font-weight: lighter;
+    font-family: "Hind";
+    color: #C1D1D3; }
+  .adress-section .adress-section-options {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #C1D1D3;
+    margin: 30px auto;
+    width: 90%;
+    margin-bottom: 10px; }
+    .adress-section .adress-section-options input, .adress-section .adress-section-options select {
+      font-size: 0.8em;
+      font-weight: lighter;
+      font-family: "Hind";
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-bottom: 1px solid #464646;
+      outline: none;
+      color: #C1D1D3; }
+
+footer {
+  margin-top: 60px;
+  background-color: #3D5585;
+  display: flex;
+  align-items: start;
+  flex-direction: row;
+  justify-content: space-between; }
+  footer .follow-us {
+    padding: 15px 30px;
+    width: 30%; }
+    footer .follow-us h2 {
+      font-size: 1.2em;
+      font-weight: bolder;
+      font-family: "Times New Roman";
+      color: #659AFE; }
+    footer .follow-us .icons img {
+      height: 30px;
+      width: 30px;
+      margin: 20px 16px 30px 0; }
+    footer .follow-us p {
+      color: #0A275E; }
+  footer .info,
+  footer .where-to-go {
+    width: 15%;
+    padding: 15px 30px; }
+    footer .info h2,
+    footer .where-to-go h2 {
+      font-size: 1.2em;
+      font-weight: bolder;
+      font-family: "Times New Roman";
+      color: #659AFE; }
+    footer .info .links,
+    footer .where-to-go .links {
+      padding: 10px 0 0 10px;
+      color: #467ADE; }
+  footer .send-us-feedback {
+    height: 260px;
+    width: 40%;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center; }
+    footer .send-us-feedback h2 {
+      font-size: 1.2em;
+      font-weight: bolder;
+      font-family: "Times New Roman"; }
+    footer .send-us-feedback input, footer .send-us-feedback .adress-section .adress-section-options select, .adress-section .adress-section-options footer .send-us-feedback select {
+      height: 30px;
+      width: 90%;
+      margin: 6px 0; }
+    footer .send-us-feedback #btn {
+      cursor: pointer;
+      color: white;
+      background-color: #0A275E;
+      border: transparent; }
+    footer .send-us-feedback #payment {
+      font-size: 1.2em;
+      font-weight: bolder;
+      font-family: "Times New Roman";
+      color: #659AFE; }
+    footer .send-us-feedback .icons img {
+      height: auto;
+      width: 50px;
+      margin: 20px 16px 30px 0; }

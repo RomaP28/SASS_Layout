@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flexOptions($align, $dir, $just) {
+  display: flex;
+  align-items: $align;
+  flex-direction: $dir;
+  justify-content: $just;
+}
+
+@mixin sizes($h, $w) {
+  height: $h;
+  width: $w;
+}
+
+@mixin fonts($size, $weight, $family) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family
+}
+
+@mixin card-img($h, $w, $url) {
+  @include sizes($h, $w);
+  background: $url no-repeat center;
+  background-size: cover;
+  display: inline-block;
+}
+
+@mixin footer-defaults {
+  padding: 15px 30px;
+
+  h2 {
+    @include fonts(1.2em, bolder, 'Times New Roman');
+    color: $fontFooterH2;
+  }
+}
+
+@mixin footer-icons($h, $w) {
+  img {
+    @include sizes($h, $w);
+    margin: 20px 16px 30px 0;
+  }
+}
+
+
+
+.header-section {
+  @include sizes(100vh, 100%);
+  padding-top: 60px;
+  background-image: $bgImg;
+  border-top-right-radius: 1000px 500px;
+  border-bottom-right-radius: 1000px 500px;
+
+  .menu ul {
+    @include flexOptions(center, row, space-between);
+    margin-left: 35px;
+    font-size: 1.5em;
+    width: 62%;
+    list-style: none;
+
+    .wide {
+      margin-top: -13px;
+      text-align: center;
+      width: 90px;
+    }
+
+    a {
+      color: $fontColorNav;
+      outline: none;
+      text-decoration: none;
+    }
+  }
+
+  .header-content {
+    @include flexOptions(center, column, space-around);
+    @include sizes(400px, 50%);
+    margin: 200px auto 0 auto;
+
+
+    h1 {
+      @include fonts(3em, lighter, 'Source Sans Pro');
+      text-align: center;
+      color: white;
+    }
+
+    button {
+      cursor: pointer;
+      border: 1px solid grey;
+      color: grey;
+      background-color: transparent;
+      padding: 16px 30px;
+    }
+  }
+}
+
+.main-section {
+  @include sizes(auto, 1000px);
+  margin: 30px auto;
+  text-align: center;
+
+  h2 {
+    @include fonts(2.5em, lighter, 'Hind');
+  }
+
+  .container {
+    display: flex;
+    box-shadow: 0px 0px 11px -1px #404040;
+    margin-top: 50px;
+
+    .img-01 {
+      @include card-img(300px, 230px, $bdImg1);
+    }
+
+    .img-02 {
+      @include card-img(230px, 230px, $bdImg2);
+    }
+
+    .img-03 {
+      @include card-img(290px, 230px, $bdImg3);
+    }
+
+    .textblock {
+      width: 70%;
+      padding: 30px 10px 0 30px;
+
+      h2 {
+        @include fonts(2.2em, lighter, 'Hind');
+        text-align: center;
+        margin-left: 5px;
+        color: $fontColorMainH2;
+      }
+
+      p {
+        @include fonts(1em, lighter, 'Hind');
+        color: $fontColorMainP;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.reviews {
+  @extend .main-section;
+  @include sizes(auto, 1280px);
+  background-color: $bgReviews;
+  padding-top: 12px;
+
+  h2 {
+    @include fonts(2em, lighter, 'Hind');
+    color: #CBA2B0;
+    margin-bottom: 10px;
+  }
+
+  .reviews-container {
+    @include flexOptions(center, row, space-around);
+    padding-bottom: 20px;
+
+    .card {
+      @include sizes(120px, 30%);
+      display: flex;
+      padding: 10px;
+      background-color: #CBA2B0;
+      color: white;
+
+      img {
+        @include sizes(70px, 70px);
+        border-radius: 50%;
+      }
+
+      .card-text {
+        margin: auto;
+        margin-left: 20px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.adress-section {
+  @extend .main-section;
+  @include sizes(auto, 800px);
+  padding-top: 50px;
+  padding-bottom: 5px;
+  background-color: $bgTour;
+
+  h2 {
+    @include fonts(2em, lighter, 'Hind');
+    color: $fontTour;
+  }
+
+  .adress-section-options {
+    @include flexOptions(center, row, space-between);
+    color: $fontTour;
+    margin: 30px auto 10px auto;
+    width: 90%;
+
+    input {
+      @include fonts(0.8em, lighter, 'Hind');
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-bottom: 1px solid $fontTour2;
+      outline: none;
+      color: $fontTour;
+    }
+
+    select {
+      @extend input;
+    }
+  }
+}
+
+
+footer {
+  margin-top: 60px;
+  background-color: $bgFooter;
+  @include flexOptions(start, row, space-between);
+
+  .follow-us {
+    @include footer-defaults;
+    width: 30%;
+
+    .icons {
+      @include footer-icons(30px, 30px);
+    }
+
+    p {
+      color: $fontFooter;
+    }
+  }
+
+  .info,
+  .where-to-go {
+    width: 15%;
+    @include footer-defaults;
+
+    .links {
+      padding: 10px 0 0 10px;
+      color: $fontFooterLinks;
+    }
+  }
+
+  .send-us-feedback {
+    @include sizes(260px, 40%);
+    @include flexOptions(stretch, column, center);
+
+    h2 {
+      @include fonts(1.2em, bolder, 'Times New Roman');
+    }
+
+    input {
+      @include sizes(30px, 90%);
+      margin: 6px 0;
+    }
+
+    #btn {
+      cursor: pointer;
+      color: white;
+      background-color: $btnColor;
+      border: transparent;
+    }
+
+    #payment {
+      @include fonts(1.2em, bolder, 'Times New Roman');
+      color: $fontFooterH2;
+    }
+
+    .icons {
+      @include footer-icons(auto, 50px);
+    }
+  }
+}
